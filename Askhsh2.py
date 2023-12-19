@@ -28,3 +28,25 @@ print("\n" ,f.read())
 f.close()
 
 
+f = open("myfile.txt", "r")
+f3=(f.read())
+wordsf3 = f3.split(" ")
+print(wordsf3)
+n=0
+wordsf4=[]
+for i in wordsf3:
+        wordsf4.append(i[::-1])
+        n+=1
+f4=' '.join(wordsf4)
+print(wordsf4)
+f = open("myfile.txt", "w")
+f.write(f4)
+f = open("myfile.txt", "r")
+print("\n" ,f.read())
+f.close()
+
+#allos tropos pou anapodogirizei tis lexeis kai tis kanei opws htan sto arxiko lorem ipsum
+y=len(wordsf4)-1   #gia na einai sto swsto range to y to -1
+for x in range (len(wordsf4)):
+        #print(wordsf4[y])
+        y=y-1
