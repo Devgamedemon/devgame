@@ -1,4 +1,31 @@
 
+def my_actions(actionn, canon):     #param1=2 etsi dinw default timh sthn param1
+    if actionn == 1:
+        canonball = input("\n Enter your ammo: ")
+        canon.insert(0, canonball)  # me to canon.append tha htan FinFout
+    elif actionn == 2:
+        if len(canon) != 0:
+            canon.pop(0)
+        else:
+            print("empty cannon")
+
+    elif actionn == 3:
+        if len(canon) != 0:
+            print(canon[0])
+        else:
+            print("empty cannon")
+    elif actionn == 4:
+        if len(canon) != 0:
+            print("ready to fire Canon====:")
+        else:
+            print("empty cannon")
+    elif actionn == 5:
+        print("number of canonballs:",len(canon))
+    return canon
+
+
+
+
 canon=[]
 print(" \n *****MAIN MENU*****")
 print("\n 1. Load(Add a cannon ball on the top of the loader)")
@@ -15,17 +42,9 @@ while cond == True:
     action = input("\n Enter your action: ")
     if action.isdigit():
         actionn=int(action)
-        if actionn == 1 :
-            canonball = input("\n Enter your ammo: ")
-            canon.append(canonball)
-        elif actionn == 2 :
-            canon.pop(0)
-        elif actionn == 3 :
-            print(canon[0])
-        elif actionn == 4 :
-            if canon[0] == []:
-                print("ready to fire Canon====:")
-        elif actionn == 5 :
-            print(len(actionn))
+        canon=my_actions(actionn, canon)
     else:
         print("Invalid input")
+
+
+
