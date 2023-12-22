@@ -7,21 +7,19 @@
 # at least one uppercase letter and one lowercase letter
 
 
-
-
 password=[]
 
-input1=str(input("\n Enter your strong-password: ") )
+
 #password.append (input1)
 
-print(input1)
+# print(input1)
 cond=False
 while  cond==False :
         cond1=False
         cond2=False
         cond3=False
         cond4=False
-        input1 = str(input("\n your password must be at least 8 characters lond an uppercase and lowercase letter and a digit: "))
+        input1 = input("\n your password must be at least 8 characters lond an uppercase and lowercase letter and a digit: ")
         if len(input1) >=8:
                 print(len(input1))
                 cond1=True
@@ -36,13 +34,24 @@ while  cond==False :
                         cond4 = True
         if cond1 and cond2 and cond3 and cond4 :
                 cond=True
+        else:
+                if cond1==False :
+                        print("The password must be at least 8 chars")
+                if cond2==False :
+                        print("The password must have at least a uppercase letter!")
+                if cond3==False :
+                        print("The password must have at least a lowercase letter!")
+                if cond4==False :
+                        print("The password must have at least one digit!")
 
 
 
 
-        print("Your password must be at least 7 characters long including A capital letter")
-        print("What a secured password!")
-        print("your password is strong")
+        # print("Your password must be at least 7 characters long including A capital letter")
+        # print("What a secured password!")
+print("your password is strong")
+
+
 
 
 
