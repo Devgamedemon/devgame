@@ -36,5 +36,6 @@ while cond==False :
         else:
                 print("invalid email")
                 continue
-        if counter2==1 and counter1==2 :
+        if counter2==1 and counter1==1 :
                 print("valid")
+                cond = True
